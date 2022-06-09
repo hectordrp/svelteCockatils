@@ -1,32 +1,44 @@
 <script>
-	export let name;
+	import Cocktails from "./cocktails/Cocktails.svelte";
+	import HorizontalMenu from "./UI/HorizontalMenu.svelte";
+	import Header from "./UI/Header.svelte";
+
+	import { cocktailsStore, ingredientsStore } from "./cocktails/cocktails-store";
+
+	fetch(
+		"https://thecocktaildbapp-default-rtdb.europe-west1.firebasedatabase.app/cocktails.json"
+	)
+		.then((response) => response.json())
+		.then((data) => {
+            cocktailsStore.setCocktails(data);
+		});
+
+    fetch(
+		"https://thecocktaildbapp-default-rtdb.europe-west1.firebasedatabase.app/ingredients.json"
+	)
+		.then((response) => response.json())
+		.then((data) => {
+            ingredientsStore.setIngredients(data);
+		});
+	
+	let menuItems = ["All", "Popular", "New", "Bartender's Choice"];
+	let selectedItem = "All";
+
+	function changeMenuItem(event) {
+		selectedItem = event.target.innerText;
+	}
+	
 </script>
 
-<main>
-	<h1>Hello {name}!</h1>
-	<p>This is a starter template for a Svelte PWA, based in the <a href="https://github.com/sveltejs/template" target="_blank">Svelte template</a></p>
-	<p>You will find the manifest.json file and the service-worker.js file in the public folder</p>
-	<p>To update the proper icons for the PWA check <i>/public/images/icons</i></p>
+<Header />
+<main > 
+	<HorizontalMenu {menuItems} {selectedItem} on:click={changeMenuItem}/>
+	<Cocktails {cocktailsStore} {selectedItem}/>
+
 </main>
 
 <style>
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
-	}
-
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
-
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
+	* {
+		font-family: "Roboto Slab", serif;
 	}
 </style>
