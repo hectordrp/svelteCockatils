@@ -31,14 +31,21 @@
 </script>
 
 <Header />
+<HorizontalMenu {menuItems} {selectedItem} on:click={changeMenuItem}/>
 <main > 
-	<HorizontalMenu {menuItems} {selectedItem} on:click={changeMenuItem}/>
 	<Cocktails {cocktailsStore} {selectedItem}/>
-
 </main>
 
 <style>
 	* {
 		font-family: "Roboto Slab", serif;
+	}
+
+	main {
+		margin: 0 auto;
+		max-width: 1200px;
+		padding: 0 2rem;
+		box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+		min-height: 60%;
 	}
 </style>

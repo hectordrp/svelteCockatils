@@ -1,5 +1,5 @@
 <script>
-
+import Card from "../UI/Card.svelte";
 
 export let cocktailsStore;
 export let selectedItem;
@@ -11,9 +11,15 @@ export let selectedItem;
 
     {#each  $cocktailsStore as cocktail }
         {#if cocktail.category && cocktail.category.find(cat => { return cat === selectedItem })}
-            <div class="card">{cocktail.cocktailName}</div>
+            <Card > 
+                <div slot="card-header">{cocktail.cocktailName}</div>
+                <div slot="card-body">{cocktail.category}</div>
+            </Card>
         {:else if selectedItem === "All"}
-            <div class="card">{cocktail.cocktailName}</div>
+            <Card>
+                <div slot="card-header">{cocktail.cocktailName}</div>
+                <div slot="card-body">{cocktail.category}</div>
+            </Card>
         {/if}
     {/each}
 
