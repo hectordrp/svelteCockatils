@@ -44,7 +44,7 @@
 	main {
 		margin: 0 auto;
 		max-width: 1200px;
-		padding: 0 2rem;
+		padding: 0 1rem;
 		box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 		min-height: 60%;
 	}
