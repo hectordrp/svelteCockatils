@@ -17,18 +17,18 @@
                 <div slot="card-header" class="card-header">
                     <span>{cocktail.cocktailName}</span>
                 </div>
-                <div slot="card-body" class="card-body">
-                    ><span>{cocktail.category || ""}</span>
-                </div>
+                <!-- <div slot="card-body" class="card-body">
+                    <span>{cocktail.category || ""}</span>
+                </div> -->
             </Card>
         {:else if selectedItem === "All"}
             <Card {cardImage}>
                 <div slot="card-header" class="card-header">
                     <span>{cocktail.cocktailName}</span>
                 </div>
-                <div slot="card-body" class="card-body">
+                <!-- <div slot="card-body" class="card-body">
                     <span>{cocktail.category || ""}</span>
-                </div>
+                </div> -->
             </Card>
         {/if}
     {/each}
@@ -53,11 +53,11 @@
         display: block;
         padding: 0 1rem;
     }
-    .card-header span,
+    /* .card-header span,
     .card-body span {
         text-align: left;
         /* padding: 0 1rem; */
-    }
+    } */
     .card-body {
         box-sizing: content-box;
         font-size: 1rem;
@@ -67,5 +67,6 @@
         overflow-wrap: break-word;
         display: block;
         padding: 0 1rem;
+
     }
 </style>
