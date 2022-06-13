@@ -56,7 +56,7 @@
     /* .card-header span,
     .card-body span {
         text-align: left;
-        /* padding: 0 1rem; */
+         padding: 0 1rem; 
     } */
     .card-body {
         box-sizing: content-box;
