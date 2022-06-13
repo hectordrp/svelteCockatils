@@ -15,20 +15,14 @@
             })}
             <Card {cardImage}>
                 <div slot="card-header" class="card-header">
-                    <span>{cocktail.cocktailName}</span>
+                    <a href="#/cocktail/{cocktail.id}">{cocktail.cocktailName}</a>
                 </div>
-                <!-- <div slot="card-body" class="card-body">
-                    <span>{cocktail.category || ""}</span>
-                </div> -->
             </Card>
         {:else if selectedItem === "All"}
             <Card {cardImage}>
                 <div slot="card-header" class="card-header">
-                    <span>{cocktail.cocktailName}</span>
+                    <a href="#/cocktail/{cocktail.id}">{cocktail.cocktailName}</a>
                 </div>
-                <!-- <div slot="card-body" class="card-body">
-                    <span>{cocktail.category || ""}</span>
-                </div> -->
             </Card>
         {/if}
     {/each}

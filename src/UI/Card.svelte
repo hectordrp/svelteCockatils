@@ -1,11 +1,12 @@
 <script>
     export let cardImage;
+    export let minImgHeight = "100px";
     // export let cardImgageAlt = "Card image";
 
 </script>
 <div class="card">
     {#if cardImage}
-        <div class="cardImg" style="background-image: url({cardImage});"/>
+        <div class="cardImg"  style="background-image: url({cardImage}); min-height:{minImgHeight};"/>
     {/if}
     
     <slot name="card-header" class="card-header" > </slot>
