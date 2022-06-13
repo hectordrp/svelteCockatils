@@ -1,4 +1,6 @@
 <script>
+import { Link } from "svelte-navigator";
+
     import Card from "../UI/Card.svelte";
 
     export let cocktailsStore;
@@ -15,20 +17,14 @@
             })}
             <Card {cardImage}>
                 <div slot="card-header" class="card-header">
-                    <span>{cocktail.cocktailName}</span>
+                    <Link to="/cocktail/{cocktail.id}">{cocktail.cocktailName}</Link>
                 </div>
-                <!-- <div slot="card-body" class="card-body">
-                    <span>{cocktail.category || ""}</span>
-                </div> -->
             </Card>
         {:else if selectedItem === "All"}
             <Card {cardImage}>
                 <div slot="card-header" class="card-header">
-                    <span>{cocktail.cocktailName}</span>
+                    <Link to="/cocktail/{cocktail.id}">{cocktail.cocktailName}</Link>
                 </div>
-                <!-- <div slot="card-body" class="card-body">
-                    <span>{cocktail.category || ""}</span>
-                </div> -->
             </Card>
         {/if}
     {/each}

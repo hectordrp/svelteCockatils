@@ -2,8 +2,10 @@
 	import Cocktails from "./cocktails/Cocktails.svelte";
 	import HorizontalMenu from "./UI/HorizontalMenu.svelte";
 	import Header from "./UI/Header.svelte";
+	import { Router, Route } from "svelte-navigator";
 
 	import { cocktailsStore, ingredientsStore } from "./cocktails/cocktails-store";
+import CocktailItem from "./cocktails/cocktailItem.svelte";
 
 	fetch(
 		"https://thecocktaildbapp-default-rtdb.europe-west1.firebasedatabase.app/cocktails.json"
@@ -33,8 +35,13 @@
 <Header />
 <HorizontalMenu {menuItems} {selectedItem} on:click={changeMenuItem}/>
 <main > 
-	<Cocktails {cocktailsStore} {selectedItem}/>
+	<!-- <Cocktails {cocktailsStore} {selectedItem}/> -->
+	<Router>
+		<Route path="/" component={Cocktails} {cocktailsStore} {selectedItem}/>
+		<Route path="/cocktail/:id" component={CocktailItem}  {cocktailsStore} {selectedItem}/>
+	</Router>
 </main>
+
 
 <style>
 	* {
