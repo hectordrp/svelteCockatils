@@ -3,7 +3,7 @@ var ghpages = require('gh-pages');
 ghpages.publish(
     'public', // path to public directory
     {
-        branch: 'gh-pages',
+        branch: 'develop',
         repo: 'https://github.com/hectordrp/svelteCocktails.git',
         user: {
             name: 'Hector del Rosario', 
@@ -13,4 +13,4 @@ ghpages.publish(
     () => {
         console.log('Deploy Complete!')
     }
-)
+) 
