@@ -24,12 +24,17 @@
             window.location.href = "/";
         }
     }
+
+    function goBack() {
+        location.href="#/";
+    }
 </script>
 
 {#if cocktail}
     <div class="container">
+    
         <section>
-            <Card {cardImage}  minImgHeight={"300px"}>
+            <Card {cardImage} on:goBack={goBack} minImgHeight={"300px"} goBackBtn={"/"}>
                 <div slot="card-header" class="card-header">
                     {cocktail.cocktailName}
                 </div>
