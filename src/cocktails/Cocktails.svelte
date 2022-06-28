@@ -15,16 +15,16 @@
         {#if cocktail.category 
           && cocktail.category.find((cat) => { return cat === selectedItem; }) 
           && (`${JSON.stringify(cocktail.recipes)}`.toUpperCase().includes($searchTextBoxStore.toUpperCase()) || cocktail.cocktailName.toUpperCase().includes($searchTextBoxStore.toUpperCase()))}
-            <Card {cardImage}>
+            <Card {cardImage} on:cardClick={location.href="#/cocktail/"+cocktail.id}>
                 <div slot="card-header" class="card-header">
-                    <a href="#/cocktail/{cocktail.id}">{cocktail.cocktailName}</a>
+                    <span>{cocktail.cocktailName}</span>
                 </div>
             </Card>
         {:else if selectedItem === "All" 
            && ( `${JSON.stringify(cocktail.recipes)}`.toUpperCase().includes($searchTextBoxStore.toUpperCase()) || cocktail.cocktailName.toUpperCase().includes($searchTextBoxStore.toUpperCase()))}
-            <Card {cardImage}>
+            <Card {cardImage} on:cardClick={location.href="#/cocktail/"+cocktail.id}>
                 <div slot="card-header" class="card-header">
-                    <a href="#/cocktail/{cocktail.id}">{cocktail.cocktailName}</a>
+                    <span href="#/cocktail/{cocktail.id}">{cocktail.cocktailName}</span>
                 </div>
             </Card>
         {/if}

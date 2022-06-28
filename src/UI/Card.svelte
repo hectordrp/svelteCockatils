@@ -3,7 +3,8 @@
 
     export let cardImage;
     export let minImgHeight = "100px";
-    export let goBackBtn = false
+    export let goBackBtn = false;
+
     // export let cardImgageAlt = "Card image";
 
     const dispatch = createEventDispatcher();
@@ -11,8 +12,15 @@
     function goBack () {
         dispatch('goBack', {});
     }
+
+    function dispatchCardClick() {
+        dispatch('cardClick', {});
+    }
+
+
+
 </script>
-<div class="card">
+<div class="card" on:click={dispatchCardClick}>
     {#if cardImage}
         {#if goBackBtn}
             <button class="btn goBackBtn" on:click={goBack}>
