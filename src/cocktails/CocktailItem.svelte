@@ -34,7 +34,7 @@
     <div class="container">
     
         <section>
-            <Card {cardImage} on:goBack={goBack} minImgHeight={"300px"} goBackBtn={"/"}>
+            <Card cardImage={cocktail.imageUrl ? cocktail.imageUrl : cardImage} on:goBack={goBack} minImgHeight={"300px"} goBackBtn={"/"}>
                 <div slot="card-header" class="card-header">
                     {cocktail.cocktailName}
                 </div>

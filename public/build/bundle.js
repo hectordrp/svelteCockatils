@@ -1273,7 +1273,9 @@ var app = (function () {
 
     	const card = new Card({
     			props: {
-    				cardImage: /*cardImage*/ ctx[4],
+    				cardImage: /*cocktail*/ ctx[6].imageUrl
+    				? /*cocktail*/ ctx[6].imageUrl
+    				: /*cardImage*/ ctx[4],
     				$$slots: {
     					default: [create_default_slot_1],
     					"card-header": [create_card_header_slot_1]
@@ -1298,6 +1300,10 @@ var app = (function () {
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
     			const card_changes = {};
+
+    			if (dirty & /*$cocktailsStore*/ 4) card_changes.cardImage = /*cocktail*/ ctx[6].imageUrl
+    			? /*cocktail*/ ctx[6].imageUrl
+    			: /*cardImage*/ ctx[4];
 
     			if (dirty & /*$$scope, $cocktailsStore*/ 516) {
     				card_changes.$$scope = { dirty, ctx };
@@ -1336,7 +1342,9 @@ var app = (function () {
 
     	const card = new Card({
     			props: {
-    				cardImage: /*cardImage*/ ctx[4],
+    				cardImage: /*cocktail*/ ctx[6].imageUrl
+    				? /*cocktail*/ ctx[6].imageUrl
+    				: /*cardImage*/ ctx[4],
     				$$slots: {
     					default: [create_default_slot],
     					"card-header": [create_card_header_slot]
@@ -1361,6 +1369,10 @@ var app = (function () {
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
     			const card_changes = {};
+
+    			if (dirty & /*$cocktailsStore*/ 4) card_changes.cardImage = /*cocktail*/ ctx[6].imageUrl
+    			? /*cocktail*/ ctx[6].imageUrl
+    			: /*cardImage*/ ctx[4];
 
     			if (dirty & /*$$scope, $cocktailsStore*/ 516) {
     				card_changes.$$scope = { dirty, ctx };
@@ -1407,10 +1419,10 @@ var app = (function () {
     			span = element("span");
     			t = text(t_value);
     			attr_dev(span, "href", span_href_value = "#/cocktail/" + /*cocktail*/ ctx[6].id);
-    			add_location(span, file$1, 26, 20, 1327);
+    			add_location(span, file$1, 26, 20, 1428);
     			attr_dev(div, "slot", "card-header");
     			attr_dev(div, "class", "card-header svelte-gka30t");
-    			add_location(div, file$1, 25, 16, 1261);
+    			add_location(div, file$1, 25, 16, 1362);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -1440,7 +1452,7 @@ var app = (function () {
     	return block;
     }
 
-    // (25:12) <Card {cardImage} on:cardClick={location.href="#/cocktail/"+cocktail.id}>
+    // (25:12) <Card cardImage={cocktail.imageUrl ? cocktail.imageUrl : cardImage} on:cardClick={location.href="#/cocktail/"+cocktail.id}>
     function create_default_slot_1(ctx) {
     	let t;
 
@@ -1461,7 +1473,7 @@ var app = (function () {
     		block,
     		id: create_default_slot_1.name,
     		type: "slot",
-    		source: "(25:12) <Card {cardImage} on:cardClick={location.href=\\\"#/cocktail/\\\"+cocktail.id}>",
+    		source: "(25:12) <Card cardImage={cocktail.imageUrl ? cocktail.imageUrl : cardImage} on:cardClick={location.href=\\\"#/cocktail/\\\"+cocktail.id}>",
     		ctx
     	});
 
@@ -1480,10 +1492,10 @@ var app = (function () {
     			div = element("div");
     			span = element("span");
     			t = text(t_value);
-    			add_location(span, file$1, 19, 20, 834);
+    			add_location(span, file$1, 19, 20, 885);
     			attr_dev(div, "slot", "card-header");
     			attr_dev(div, "class", "card-header svelte-gka30t");
-    			add_location(div, file$1, 18, 16, 768);
+    			add_location(div, file$1, 18, 16, 819);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -1509,7 +1521,7 @@ var app = (function () {
     	return block;
     }
 
-    // (18:12) <Card {cardImage} on:cardClick={location.href="#/cocktail/"+cocktail.id}>
+    // (18:12) <Card cardImage={cocktail.imageUrl ? cocktail.imageUrl : cardImage} on:cardClick={location.href="#/cocktail/"+cocktail.id}>
     function create_default_slot(ctx) {
     	let t;
 
@@ -1530,7 +1542,7 @@ var app = (function () {
     		block,
     		id: create_default_slot.name,
     		type: "slot",
-    		source: "(18:12) <Card {cardImage} on:cardClick={location.href=\\\"#/cocktail/\\\"+cocktail.id}>",
+    		source: "(18:12) <Card cardImage={cocktail.imageUrl ? cocktail.imageUrl : cardImage} on:cardClick={location.href=\\\"#/cocktail/\\\"+cocktail.id}>",
     		ctx
     	});
 
@@ -1660,7 +1672,7 @@ var app = (function () {
     			}
 
     			attr_dev(section, "class", "svelte-gka30t");
-    			add_location(section, file$1, 12, 0, 303);
+    			add_location(section, file$1, 12, 0, 304);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1675,7 +1687,7 @@ var app = (function () {
     			current = true;
     		},
     		p: function update(ctx, [dirty]) {
-    			if (dirty & /*cardImage, location, $cocktailsStore, selectedItem, JSON, $searchTextBoxStore*/ 30) {
+    			if (dirty & /*$cocktailsStore, cardImage, location, selectedItem, JSON, $searchTextBoxStore*/ 30) {
     				each_value = /*$cocktailsStore*/ ctx[2];
     				validate_each_argument(each_value);
     				let i;
@@ -2262,7 +2274,7 @@ var app = (function () {
     		c: function create() {
     			header = element("header");
     			h1 = element("h1");
-    			h1.textContent = "Cocktails";
+    			h1.textContent = "BardeMecum";
     			t1 = space();
     			div = element("div");
     			button = element("button");
@@ -2273,19 +2285,19 @@ var app = (function () {
     			attr_dev(h1, "class", "svelte-11hoq0o");
     			add_location(h1, file$3, 32, 4, 733);
     			attr_dev(path, "d", "M500.3 443.7l-119.7-119.7c27.22-40.41 40.65-90.9 33.46-144.7C401.8 87.79 326.8 13.32 235.2 1.723C99.01-15.51-15.51 99.01 1.724 235.2c11.6 91.64 86.08 166.7 177.6 178.9c53.8 7.189 104.3-6.236 144.7-33.46l119.7 119.7c15.62 15.62 40.95 15.62 56.57 0C515.9 484.7 515.9 459.3 500.3 443.7zM79.1 208c0-70.58 57.42-128 128-128s128 57.42 128 128c0 70.58-57.42 128-128 128S79.1 278.6 79.1 208z");
-    			add_location(path, file$3, 36, 238, 1121);
+    			add_location(path, file$3, 36, 238, 1122);
     			attr_dev(svg, "xmlns", "http://www.w3.org/2000/svg");
     			attr_dev(svg, "viewBox", "0 0 512 512");
-    			add_location(svg, file$3, 36, 8, 891);
+    			add_location(svg, file$3, 36, 8, 892);
     			attr_dev(button, "class", "searchBtn svelte-11hoq0o");
-    			add_location(button, file$3, 35, 6, 831);
+    			add_location(button, file$3, 35, 6, 832);
     			attr_dev(input, "class", "searchBox svelte-11hoq0o");
     			attr_dev(input, "focused", input_focused_value = !/*collapsed*/ ctx[0]);
     			set_style(input, "width", /*$inputSize*/ ctx[3] - 1.85 + "rem");
-    			add_location(input, file$3, 38, 6, 1547);
+    			add_location(input, file$3, 38, 6, 1548);
     			attr_dev(div, "class", "searchBoxContainer svelte-11hoq0o");
     			set_style(div, "width", /*$inputSize*/ ctx[3] + "rem");
-    			add_location(div, file$3, 34, 4, 759);
+    			add_location(div, file$3, 34, 4, 760);
     			attr_dev(header, "class", "svelte-11hoq0o");
     			add_location(header, file$3, 31, 2, 719);
     		},
@@ -2469,7 +2481,9 @@ var app = (function () {
 
     	const card = new Card({
     			props: {
-    				cardImage: /*cardImage*/ ctx[1],
+    				cardImage: /*cocktail*/ ctx[0].imageUrl
+    				? /*cocktail*/ ctx[0].imageUrl
+    				: /*cardImage*/ ctx[1],
     				minImgHeight: "300px",
     				goBackBtn: "/",
     				$$slots: {
@@ -2502,6 +2516,10 @@ var app = (function () {
     		},
     		p: function update(ctx, dirty) {
     			const card_changes = {};
+
+    			if (dirty & /*cocktail*/ 1) card_changes.cardImage = /*cocktail*/ ctx[0].imageUrl
+    			? /*cocktail*/ ctx[0].imageUrl
+    			: /*cardImage*/ ctx[1];
 
     			if (dirty & /*$$scope, cocktail*/ 33) {
     				card_changes.$$scope = { dirty, ctx };
@@ -2547,7 +2565,7 @@ var app = (function () {
     			t = text(t_value);
     			attr_dev(div, "slot", "card-header");
     			attr_dev(div, "class", "card-header svelte-r0mke1");
-    			add_location(div, file$4, 37, 16, 1000);
+    			add_location(div, file$4, 37, 16, 1050);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -2589,11 +2607,11 @@ var app = (function () {
     			t1 = space();
     			p = element("p");
     			t2 = text(t2_value);
-    			add_location(h2, file$4, 41, 20, 1193);
-    			add_location(p, file$4, 43, 24, 1300);
+    			add_location(h2, file$4, 41, 20, 1243);
+    			add_location(p, file$4, 43, 24, 1350);
     			attr_dev(div, "slot", "card-body");
     			attr_dev(div, "class", "card-body svelte-r0mke1");
-    			add_location(div, file$4, 40, 16, 1131);
+    			add_location(div, file$4, 40, 16, 1181);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -2621,7 +2639,7 @@ var app = (function () {
     	return block;
     }
 
-    // (37:12) <Card {cardImage} on:goBack={goBack} minImgHeight={"300px"} goBackBtn={"/"}>
+    // (37:12) <Card cardImage={cocktail.imageUrl ? cocktail.imageUrl : cardImage} on:goBack={goBack} minImgHeight={"300px"} goBackBtn={"/"}>
     function create_default_slot$1(ctx) {
     	let t;
 
@@ -2642,7 +2660,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$1.name,
     		type: "slot",
-    		source: "(37:12) <Card {cardImage} on:goBack={goBack} minImgHeight={\\\"300px\\\"} goBackBtn={\\\"/\\\"}>",
+    		source: "(37:12) <Card cardImage={cocktail.imageUrl ? cocktail.imageUrl : cardImage} on:goBack={goBack} minImgHeight={\\\"300px\\\"} goBackBtn={\\\"/\\\"}>",
     		ctx
     	});
 

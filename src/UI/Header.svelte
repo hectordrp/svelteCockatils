@@ -30,7 +30,7 @@
   </script>
 
   <header>
-    <h1>Cocktails</h1>
+    <h1>BardeMecum</h1>
 
     <div class='searchBoxContainer' style="width: {$inputSize}rem;">
       <button class='searchBtn' on:click={toggleSearch}>
