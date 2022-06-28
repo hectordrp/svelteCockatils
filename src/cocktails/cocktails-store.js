@@ -2,6 +2,7 @@ import { writable } from 'svelte/Store';
 
 const cocktails = writable([]);
 const ingredients = writable([]);
+const searchTextBox = writable("");
 
 const cocktailsStore = {
     subscribe: cocktails.subscribe,
@@ -27,4 +28,11 @@ const ingredientsStore = {
     }
 }
 
-export { ingredientsStore, cocktailsStore };
+const searchTextBoxStore = {
+    subscribe: searchTextBox.subscribe,
+    setSearch: text => {
+        searchTextBox.set(text)
+    }
+}
+
+export { ingredientsStore, cocktailsStore, searchTextBoxStore };

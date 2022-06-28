@@ -1,11 +1,12 @@
 {
-  "name": "svelte-pwa-template",
+  "name": "SvelteCocktails-template",
   "version": "1.0.4",
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
     "start": "sirv public",
-    "test": "echo test"
+    "test": "echo test",
+    "deploy": "node ./gh-pages.js"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "11.0.2",

@@ -1,6 +1,8 @@
 <script>
     import Card from "../UI/Card.svelte";
 
+    import {searchTextBoxStore} from './cocktails-store';
+
     export let cocktailsStore;
     export let selectedItem;
 
@@ -10,15 +12,16 @@
 
 <section>
     {#each $cocktailsStore as cocktail}
-        {#if cocktail.category && cocktail.category.find((cat) => {
-                return cat === selectedItem;
-            })}
+        {#if cocktail.category 
+          && cocktail.category.find((cat) => { return cat === selectedItem; }) 
+          && (`${JSON.stringify(cocktail.recipes)}`.toUpperCase().includes($searchTextBoxStore.toUpperCase()) || cocktail.cocktailName.toUpperCase().includes($searchTextBoxStore.toUpperCase()))}
             <Card {cardImage}>
                 <div slot="card-header" class="card-header">
                     <a href="#/cocktail/{cocktail.id}">{cocktail.cocktailName}</a>
                 </div>
             </Card>
-        {:else if selectedItem === "All"}
+        {:else if selectedItem === "All" 
+           && ( `${JSON.stringify(cocktail.recipes)}`.toUpperCase().includes($searchTextBoxStore.toUpperCase()) || cocktail.cocktailName.toUpperCase().includes($searchTextBoxStore.toUpperCase()))}
             <Card {cardImage}>
                 <div slot="card-header" class="card-header">
                     <a href="#/cocktail/{cocktail.id}">{cocktail.cocktailName}</a>
@@ -47,11 +50,11 @@
         display: block;
         padding: 0 1rem;
     }
-    /* .card-header span,
-    .card-body span {
-        text-align: left;
-         padding: 0 1rem; 
-    } */
+    a,
+    a:visited {
+        text-decoration: none;
+        color:black;
+    }
     .card-body {
         box-sizing: content-box;
         font-size: 1rem;
