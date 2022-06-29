@@ -66,4 +66,10 @@
         padding: 0 1rem;
 
     }
+
+    @media (min-width: 768px) {
+        section {
+            grid-template-columns: minmax(100px, 1fr) minmax(100px, 1fr) minmax(100px, 1fr);
+        }
+    }
 </style>

@@ -859,7 +859,7 @@ var app = (function () {
     			t = space();
     			div = element("div");
     			attr_dev(div, "class", "cardImg svelte-an2h17");
-    			set_style(div, "background-image", "url(" + /*cardImage*/ ctx[0] + ")");
+    			set_style(div, "background-image", "url(\"" + /*cardImage*/ ctx[0] + "\")");
     			set_style(div, "min-height", /*minImgHeight*/ ctx[1]);
     			add_location(div, file, 29, 8, 1132);
     		},
@@ -883,7 +883,7 @@ var app = (function () {
     			}
 
     			if (dirty & /*cardImage*/ 1) {
-    				set_style(div, "background-image", "url(" + /*cardImage*/ ctx[0] + ")");
+    				set_style(div, "background-image", "url(\"" + /*cardImage*/ ctx[0] + "\")");
     			}
 
     			if (dirty & /*minImgHeight*/ 2) {
@@ -1421,7 +1421,7 @@ var app = (function () {
     			attr_dev(span, "href", span_href_value = "#/cocktail/" + /*cocktail*/ ctx[6].id);
     			add_location(span, file$1, 26, 20, 1428);
     			attr_dev(div, "slot", "card-header");
-    			attr_dev(div, "class", "card-header svelte-gka30t");
+    			attr_dev(div, "class", "card-header svelte-1d8z230");
     			add_location(div, file$1, 25, 16, 1362);
     		},
     		m: function mount(target, anchor) {
@@ -1494,7 +1494,7 @@ var app = (function () {
     			t = text(t_value);
     			add_location(span, file$1, 19, 20, 885);
     			attr_dev(div, "slot", "card-header");
-    			attr_dev(div, "class", "card-header svelte-gka30t");
+    			attr_dev(div, "class", "card-header svelte-1d8z230");
     			add_location(div, file$1, 18, 16, 819);
     		},
     		m: function mount(target, anchor) {
@@ -1671,7 +1671,7 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(section, "class", "svelte-gka30t");
+    			attr_dev(section, "class", "svelte-1d8z230");
     			add_location(section, file$1, 12, 0, 304);
     		},
     		l: function claim(nodes) {
