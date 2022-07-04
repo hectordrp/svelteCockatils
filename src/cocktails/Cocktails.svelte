@@ -1,28 +1,37 @@
 <script >
     import Card from "../UI/Card.svelte";
 
-    import {searchTextBoxStore} from './cocktails-store';
+    import {searchTextBoxStore, pageStateStore } from './cocktails-store';
 
     export let cocktailsStore;
     export let selectedItem;
 
     let cardImage =
         "https://i.pinimg.com/originals/59/9b/83/599b83ec328efed7750cac987a98b55b.jpg";
+    
+        
+    const handleCardClick = (cocktailId, event) =>  {
+        location.href="#/cocktail/"+cocktailId;
+        
+        let state = $pageStateStore;
+        pageStateStore.setState({...state, modalOpened: true})
+    };
+
 </script>
 
-<section>
+<section class="modalOpen" >
     {#each $cocktailsStore as cocktail}
         {#if cocktail.category 
           && cocktail.category.find((cat) => { return cat === selectedItem; }) 
           && (`${JSON.stringify(cocktail.recipes)}`.toUpperCase().includes($searchTextBoxStore.toUpperCase()) || cocktail.cocktailName.toUpperCase().includes($searchTextBoxStore.toUpperCase()))}
-            <Card cardImage={cocktail.imageUrl ? cocktail.imageUrl : cardImage} on:cardClick={location.href="#/cocktail/"+cocktail.id}>
+            <Card cardImage={cocktail.imageUrl ? cocktail.imageUrl : cardImage} on:cardClick={handleCardClick(cocktail.id)}>
                 <div slot="card-header" class="card-header">
                     <span>{cocktail.cocktailName}</span>
                 </div>
             </Card>
         {:else if selectedItem === "All" 
            && ( `${JSON.stringify(cocktail.recipes)}`.toUpperCase().includes($searchTextBoxStore.toUpperCase()) || cocktail.cocktailName.toUpperCase().includes($searchTextBoxStore.toUpperCase()))}
-            <Card cardImage={cocktail.imageUrl ? cocktail.imageUrl : cardImage} on:cardClick={location.href="#/cocktail/"+cocktail.id}>
+            <Card cardImage={cocktail.imageUrl ? cocktail.imageUrl : cardImage} on:cardClick={handleCardClick(cocktail.id)}>
                 <div slot="card-header" class="card-header">
                     <span href="#/cocktail/{cocktail.id}">{cocktail.cocktailName}</span>
                 </div>

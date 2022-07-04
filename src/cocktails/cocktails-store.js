@@ -3,6 +3,9 @@ import { writable } from 'svelte/Store';
 const cocktails = writable([]);
 const ingredients = writable([]);
 const searchTextBox = writable("");
+const pageState = writable({
+    modalOpened: true
+});
 
 const cocktailsStore = {
     subscribe: cocktails.subscribe,
@@ -35,4 +38,11 @@ const searchTextBoxStore = {
     }
 }
 
-export { ingredientsStore, cocktailsStore, searchTextBoxStore };
+const pageStateStore = {
+    subscribe: pageState.subscribe,
+    setState: stateObj => {
+        pageState.set(stateObj)
+    }
+}
+
+export { ingredientsStore, cocktailsStore, searchTextBoxStore, pageStateStore };

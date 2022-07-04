@@ -8,6 +8,8 @@
 	import Header from "./UI/Header.svelte";
 	import CocktailItem from "./cocktails/CocktailItem.svelte";
 
+	import { pageStateStore } from './cocktails/cocktails-store';
+
 	import {
 		cocktailsStore,
 		ingredientsStore,
@@ -35,12 +37,16 @@
 	function changeMenuItem(event) {
 		selectedItem = event.target.innerText;
 	}
-
+	
+	$: document.body.classList.toggle('modalOpen', $pageStateStore.modalOpened);
 </script>
 
-<Header />
-<HorizontalMenu {menuItems} {selectedItem} on:click={changeMenuItem} />
-<main>
+<div class="topSectionHolder"></div>
+<div class="topSection">
+	<Header />
+	<HorizontalMenu {menuItems} {selectedItem} on:click={changeMenuItem} />
+</div>
+<main class="modalOpen">
 	<Cocktails {cocktailsStore} {selectedItem} />
 </main>
 {#if $url.hash.indexOf("cocktail") > 0}
@@ -70,6 +76,7 @@
 		padding: 0 1rem;
 		min-height: 60%;
 	}
+
 	.overlay {
 		overflow-y: auto;
 		position: fixed;
@@ -78,6 +85,18 @@
 		width: 100%;
 		height: 100%;
 		background: #fff;
-		z-index: 1;
+		z-index: 10;
+	}
+
+	.topSection {
+		position: fixed;
+        top: 0;
+        background: #f6f6f6;
+        z-index: 5;
+		width: 100%;
+	}
+
+	.topSectionHolder {
+		height: 5rem;
 	}
 </style>

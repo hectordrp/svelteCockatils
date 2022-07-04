@@ -1,6 +1,6 @@
 <script>
     import Card from "../UI/Card.svelte";
-    import { cocktailsStore } from "./cocktails-store";
+    import { cocktailsStore, pageStateStore } from "./cocktails-store";
 
     let cocktail = {};
 
@@ -26,6 +26,9 @@
     }
 
     function goBack() {
+        let state = $pageStateStore;
+        pageStateStore.setState({...state, modalOpened: false})
+
         location.href="#/";
     }
 </script>
