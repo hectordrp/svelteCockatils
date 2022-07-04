@@ -72,4 +72,10 @@
             grid-template-columns: minmax(100px, 1fr) minmax(100px, 1fr) minmax(100px, 1fr);
         }
     }
+
+    @media (min-width: 1024px) {
+        section {
+            grid-template-columns: minmax(100px, 1fr) minmax(100px, 1fr) minmax(100px, 1fr) minmax(100px, 1fr);
+        }
+    }
 </style>

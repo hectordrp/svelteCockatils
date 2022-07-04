@@ -84,7 +84,7 @@
         overflow-wrap: break-word;
         display: block;
         padding: 0 1rem;
-
+        white-space: pre-line;
     }
 </style>
 

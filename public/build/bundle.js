@@ -1421,7 +1421,7 @@ var app = (function () {
     			attr_dev(span, "href", span_href_value = "#/cocktail/" + /*cocktail*/ ctx[6].id);
     			add_location(span, file$1, 26, 20, 1428);
     			attr_dev(div, "slot", "card-header");
-    			attr_dev(div, "class", "card-header svelte-1d8z230");
+    			attr_dev(div, "class", "card-header svelte-vpmei");
     			add_location(div, file$1, 25, 16, 1362);
     		},
     		m: function mount(target, anchor) {
@@ -1494,7 +1494,7 @@ var app = (function () {
     			t = text(t_value);
     			add_location(span, file$1, 19, 20, 885);
     			attr_dev(div, "slot", "card-header");
-    			attr_dev(div, "class", "card-header svelte-1d8z230");
+    			attr_dev(div, "class", "card-header svelte-vpmei");
     			add_location(div, file$1, 18, 16, 819);
     		},
     		m: function mount(target, anchor) {
@@ -1671,7 +1671,7 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(section, "class", "svelte-1d8z230");
+    			attr_dev(section, "class", "svelte-vpmei");
     			add_location(section, file$1, 12, 0, 304);
     		},
     		l: function claim(nodes) {
@@ -2503,9 +2503,9 @@ var app = (function () {
     			div = element("div");
     			section = element("section");
     			create_component(card.$$.fragment);
-    			attr_dev(section, "class", "svelte-r0mke1");
+    			attr_dev(section, "class", "svelte-lq41xs");
     			add_location(section, file$4, 35, 8, 883);
-    			attr_dev(div, "class", "container svelte-r0mke1");
+    			attr_dev(div, "class", "container svelte-lq41xs");
     			add_location(div, file$4, 33, 4, 844);
     		},
     		m: function mount(target, anchor) {
@@ -2564,7 +2564,7 @@ var app = (function () {
     			div = element("div");
     			t = text(t_value);
     			attr_dev(div, "slot", "card-header");
-    			attr_dev(div, "class", "card-header svelte-r0mke1");
+    			attr_dev(div, "class", "card-header svelte-lq41xs");
     			add_location(div, file$4, 37, 16, 1050);
     		},
     		m: function mount(target, anchor) {
@@ -2610,7 +2610,7 @@ var app = (function () {
     			add_location(h2, file$4, 41, 20, 1243);
     			add_location(p, file$4, 43, 24, 1350);
     			attr_dev(div, "slot", "card-body");
-    			attr_dev(div, "class", "card-body svelte-r0mke1");
+    			attr_dev(div, "class", "card-body svelte-lq41xs");
     			add_location(div, file$4, 40, 16, 1181);
     		},
     		m: function mount(target, anchor) {
