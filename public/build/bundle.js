@@ -858,7 +858,8 @@ var app = (function () {
     			if (if_block) if_block.c();
     			t = space();
     			div = element("div");
-    			attr_dev(div, "class", "cardImg svelte-an2h17");
+    			attr_dev(div, "class", "cardImg svelte-1htsz35");
+    			attr_dev(div, "loading", "lazy");
     			set_style(div, "background-image", "url(\"" + /*cardImage*/ ctx[0] + "\")");
     			set_style(div, "min-height", /*minImgHeight*/ ctx[1]);
     			add_location(div, file, 29, 8, 1132);
@@ -925,9 +926,9 @@ var app = (function () {
     			attr_dev(svg, "xmlns", "http://www.w3.org/2000/svg");
     			attr_dev(svg, "fill", "Gray");
     			attr_dev(svg, "viewBox", "0 0 320 512");
-    			attr_dev(svg, "class", "svelte-an2h17");
+    			attr_dev(svg, "class", "svelte-1htsz35");
     			add_location(svg, file, 26, 16, 606);
-    			attr_dev(button, "class", "btn goBackBtn svelte-an2h17");
+    			attr_dev(button, "class", "btn goBackBtn svelte-1htsz35");
     			add_location(button, file, 25, 12, 540);
     		},
     		m: function mount(target, anchor, remount) {
@@ -975,7 +976,7 @@ var app = (function () {
     			if (card_header_slot) card_header_slot.c();
     			t1 = space();
     			if (card_body_slot) card_body_slot.c();
-    			attr_dev(div, "class", "card svelte-an2h17");
+    			attr_dev(div, "class", "card svelte-1htsz35");
     			add_location(div, file, 22, 0, 433);
     		},
     		l: function claim(nodes) {
@@ -1227,7 +1228,7 @@ var app = (function () {
     const ingredients = writable$1([]);
     const searchTextBox = writable$1("");
     const pageState = writable$1({
-        modalOpened: true
+        modalOpened: false
     });
 
     const cocktailsStore = {
@@ -1431,7 +1432,7 @@ var app = (function () {
     			attr_dev(span, "href", span_href_value = "#/cocktail/" + /*cocktail*/ ctx[8].id);
     			add_location(span, file$1, 35, 20, 1684);
     			attr_dev(div, "slot", "card-header");
-    			attr_dev(div, "class", "card-header svelte-vpmei");
+    			attr_dev(div, "class", "card-header svelte-1rkcbzd");
     			add_location(div, file$1, 34, 16, 1618);
     		},
     		m: function mount(target, anchor) {
@@ -1504,7 +1505,7 @@ var app = (function () {
     			t = text(t_value);
     			add_location(span, file$1, 28, 20, 1152);
     			attr_dev(div, "slot", "card-header");
-    			attr_dev(div, "class", "card-header svelte-vpmei");
+    			attr_dev(div, "class", "card-header svelte-1rkcbzd");
     			add_location(div, file$1, 27, 16, 1086);
     		},
     		m: function mount(target, anchor) {
@@ -1681,7 +1682,7 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(section, "class", "modalOpen svelte-vpmei");
+    			attr_dev(section, "class", "modalOpen svelte-1rkcbzd");
     			add_location(section, file$1, 21, 0, 563);
     		},
     		l: function claim(nodes) {
@@ -1900,7 +1901,7 @@ var app = (function () {
     		c: function create() {
     			li = element("li");
     			t = text(t_value);
-    			attr_dev(li, "class", "svelte-7mr4k9");
+    			attr_dev(li, "class", "svelte-1tb7w95");
     			add_location(li, file$2, 13, 16, 303);
     		},
     		m: function mount(target, anchor, remount) {
@@ -1940,7 +1941,7 @@ var app = (function () {
     		c: function create() {
     			li = element("li");
     			t = text(t_value);
-    			attr_dev(li, "class", "selected svelte-7mr4k9");
+    			attr_dev(li, "class", "selected svelte-1tb7w95");
     			add_location(li, file$2, 11, 16, 219);
     		},
     		m: function mount(target, anchor, remount) {
@@ -2040,9 +2041,9 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(ul, "class", "svelte-7mr4k9");
+    			attr_dev(ul, "class", "svelte-1tb7w95");
     			add_location(ul, file$2, 8, 4, 113);
-    			attr_dev(nav, "class", "svelte-7mr4k9");
+    			attr_dev(nav, "class", "svelte-1tb7w95");
     			add_location(nav, file$2, 7, 0, 102);
     		},
     		l: function claim(nodes) {
@@ -2308,23 +2309,23 @@ var app = (function () {
     			path = svg_element("path");
     			t2 = space();
     			input = element("input");
-    			attr_dev(h1, "class", "svelte-11hoq0o");
+    			attr_dev(h1, "class", "svelte-10teu3c");
     			add_location(h1, file$3, 32, 4, 733);
     			attr_dev(path, "d", "M500.3 443.7l-119.7-119.7c27.22-40.41 40.65-90.9 33.46-144.7C401.8 87.79 326.8 13.32 235.2 1.723C99.01-15.51-15.51 99.01 1.724 235.2c11.6 91.64 86.08 166.7 177.6 178.9c53.8 7.189 104.3-6.236 144.7-33.46l119.7 119.7c15.62 15.62 40.95 15.62 56.57 0C515.9 484.7 515.9 459.3 500.3 443.7zM79.1 208c0-70.58 57.42-128 128-128s128 57.42 128 128c0 70.58-57.42 128-128 128S79.1 278.6 79.1 208z");
     			add_location(path, file$3, 36, 238, 1122);
     			attr_dev(svg, "xmlns", "http://www.w3.org/2000/svg");
     			attr_dev(svg, "viewBox", "0 0 512 512");
     			add_location(svg, file$3, 36, 8, 892);
-    			attr_dev(button, "class", "searchBtn svelte-11hoq0o");
+    			attr_dev(button, "class", "searchBtn svelte-10teu3c");
     			add_location(button, file$3, 35, 6, 832);
-    			attr_dev(input, "class", "searchBox svelte-11hoq0o");
+    			attr_dev(input, "class", "searchBox svelte-10teu3c");
     			attr_dev(input, "focused", input_focused_value = !/*collapsed*/ ctx[0]);
     			set_style(input, "width", /*$inputSize*/ ctx[3] - 1.85 + "rem");
     			add_location(input, file$3, 38, 6, 1548);
-    			attr_dev(div, "class", "searchBoxContainer svelte-11hoq0o");
+    			attr_dev(div, "class", "searchBoxContainer svelte-10teu3c");
     			set_style(div, "width", /*$inputSize*/ ctx[3] + "rem");
     			add_location(div, file$3, 34, 4, 760);
-    			attr_dev(header, "class", "svelte-11hoq0o");
+    			attr_dev(header, "class", "svelte-10teu3c");
     			add_location(header, file$3, 31, 2, 719);
     		},
     		l: function claim(nodes) {
@@ -2529,9 +2530,9 @@ var app = (function () {
     			div = element("div");
     			section = element("section");
     			create_component(card.$$.fragment);
-    			attr_dev(section, "class", "svelte-lq41xs");
+    			attr_dev(section, "class", "svelte-1trqm6v");
     			add_location(section, file$4, 38, 8, 1004);
-    			attr_dev(div, "class", "container svelte-lq41xs");
+    			attr_dev(div, "class", "container svelte-1trqm6v");
     			add_location(div, file$4, 36, 4, 965);
     		},
     		m: function mount(target, anchor) {
@@ -2590,7 +2591,7 @@ var app = (function () {
     			div = element("div");
     			t = text(t_value);
     			attr_dev(div, "slot", "card-header");
-    			attr_dev(div, "class", "card-header svelte-lq41xs");
+    			attr_dev(div, "class", "card-header svelte-1trqm6v");
     			add_location(div, file$4, 40, 16, 1171);
     		},
     		m: function mount(target, anchor) {
@@ -2636,7 +2637,7 @@ var app = (function () {
     			add_location(h2, file$4, 44, 20, 1364);
     			add_location(p, file$4, 46, 24, 1471);
     			attr_dev(div, "slot", "card-body");
-    			attr_dev(div, "class", "card-body svelte-lq41xs");
+    			attr_dev(div, "class", "card-body svelte-1trqm6v");
     			add_location(div, file$4, 43, 16, 1302);
     		},
     		m: function mount(target, anchor) {
@@ -2850,7 +2851,148 @@ var app = (function () {
     /* src\App.svelte generated by Svelte v3.22.2 */
     const file$5 = "src\\App.svelte";
 
-    // (52:0) {#if $url.hash.indexOf("cocktail") > 0}
+    // (47:0) {#if !itemActive}
+    function create_if_block_1$2(ctx) {
+    	let div2;
+    	let div0;
+    	let t0;
+    	let div1;
+    	let t1;
+    	let t2;
+    	let main;
+    	let div2_transition;
+    	let current;
+    	const header = new Header({ $$inline: true });
+
+    	const horizontalmenu = new HorizontalMenu({
+    			props: {
+    				menuItems: /*menuItems*/ ctx[2],
+    				selectedItem: /*selectedItem*/ ctx[0]
+    			},
+    			$$inline: true
+    		});
+
+    	horizontalmenu.$on("click", /*changeMenuItem*/ ctx[3]);
+
+    	const cocktails = new Cocktails({
+    			props: {
+    				cocktailsStore,
+    				selectedItem: /*selectedItem*/ ctx[0]
+    			},
+    			$$inline: true
+    		});
+
+    	const block = {
+    		c: function create() {
+    			div2 = element("div");
+    			div0 = element("div");
+    			t0 = space();
+    			div1 = element("div");
+    			create_component(header.$$.fragment);
+    			t1 = space();
+    			create_component(horizontalmenu.$$.fragment);
+    			t2 = space();
+    			main = element("main");
+    			create_component(cocktails.$$.fragment);
+    			attr_dev(div0, "class", "topSectionHolder svelte-11zpkc6");
+    			add_location(div0, file$5, 56, 1, 1460);
+    			attr_dev(div1, "class", "topSection svelte-11zpkc6");
+    			add_location(div1, file$5, 57, 1, 1499);
+    			attr_dev(main, "class", "modalOpen svelte-11zpkc6");
+    			add_location(main, file$5, 61, 1, 1624);
+    			attr_dev(div2, "class", "wrapper svelte-11zpkc6");
+    			add_location(div2, file$5, 47, 0, 1319);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div2, anchor);
+    			append_dev(div2, div0);
+    			append_dev(div2, t0);
+    			append_dev(div2, div1);
+    			mount_component(header, div1, null);
+    			append_dev(div1, t1);
+    			mount_component(horizontalmenu, div1, null);
+    			append_dev(div2, t2);
+    			append_dev(div2, main);
+    			mount_component(cocktails, main, null);
+    			current = true;
+    		},
+    		p: function update(ctx, dirty) {
+    			const horizontalmenu_changes = {};
+    			if (dirty & /*selectedItem*/ 1) horizontalmenu_changes.selectedItem = /*selectedItem*/ ctx[0];
+    			horizontalmenu.$set(horizontalmenu_changes);
+    			const cocktails_changes = {};
+    			if (dirty & /*selectedItem*/ 1) cocktails_changes.selectedItem = /*selectedItem*/ ctx[0];
+    			cocktails.$set(cocktails_changes);
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(header.$$.fragment, local);
+    			transition_in(horizontalmenu.$$.fragment, local);
+    			transition_in(cocktails.$$.fragment, local);
+
+    			add_render_callback(() => {
+    				if (!div2_transition) div2_transition = create_bidirectional_transition(
+    					div2,
+    					fly,
+    					{
+    						delay: 0,
+    						duration: 500,
+    						x: -1000,
+    						y: 0,
+    						opacity: 0.5,
+    						easing: quintOut
+    					},
+    					true
+    				);
+
+    				div2_transition.run(1);
+    			});
+
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(header.$$.fragment, local);
+    			transition_out(horizontalmenu.$$.fragment, local);
+    			transition_out(cocktails.$$.fragment, local);
+
+    			if (!div2_transition) div2_transition = create_bidirectional_transition(
+    				div2,
+    				fly,
+    				{
+    					delay: 0,
+    					duration: 500,
+    					x: -1000,
+    					y: 0,
+    					opacity: 0.5,
+    					easing: quintOut
+    				},
+    				false
+    			);
+
+    			div2_transition.run(0);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div2);
+    			destroy_component(header);
+    			destroy_component(horizontalmenu);
+    			destroy_component(cocktails);
+    			if (detaching && div2_transition) div2_transition.end();
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_1$2.name,
+    		type: "if",
+    		source: "(47:0) {#if !itemActive}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (67:0) {#if itemActive}
     function create_if_block$4(ctx) {
     	let div;
     	let div_transition;
@@ -2861,8 +3003,8 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			create_component(cocktailitem.$$.fragment);
-    			attr_dev(div, "class", "overlay svelte-57piey");
-    			add_location(div, file$5, 52, 1, 1503);
+    			attr_dev(div, "class", "overlay svelte-11zpkc6");
+    			add_location(div, file$5, 67, 1, 1743);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -2924,7 +3066,7 @@ var app = (function () {
     		block,
     		id: create_if_block$4.name,
     		type: "if",
-    		source: "(52:0) {#if $url.hash.indexOf(\\\"cocktail\\\") > 0}",
+    		source: "(67:0) {#if itemActive}",
     		ctx
     	});
 
@@ -2932,102 +3074,69 @@ var app = (function () {
     }
 
     function create_fragment$5(ctx) {
-    	let div0;
-    	let t0;
-    	let div1;
-    	let t1;
-    	let t2;
-    	let main;
-    	let t3;
-    	let show_if = /*$url*/ ctx[1].hash.indexOf("cocktail") > 0;
-    	let if_block_anchor;
+    	let t;
+    	let if_block1_anchor;
     	let current;
-    	const header = new Header({ $$inline: true });
-
-    	const horizontalmenu = new HorizontalMenu({
-    			props: {
-    				menuItems: /*menuItems*/ ctx[2],
-    				selectedItem: /*selectedItem*/ ctx[0]
-    			},
-    			$$inline: true
-    		});
-
-    	horizontalmenu.$on("click", /*changeMenuItem*/ ctx[3]);
-
-    	const cocktails = new Cocktails({
-    			props: {
-    				cocktailsStore,
-    				selectedItem: /*selectedItem*/ ctx[0]
-    			},
-    			$$inline: true
-    		});
-
-    	let if_block = show_if && create_if_block$4(ctx);
+    	let if_block0 = !/*itemActive*/ ctx[1] && create_if_block_1$2(ctx);
+    	let if_block1 = /*itemActive*/ ctx[1] && create_if_block$4(ctx);
 
     	const block = {
     		c: function create() {
-    			div0 = element("div");
-    			t0 = space();
-    			div1 = element("div");
-    			create_component(header.$$.fragment);
-    			t1 = space();
-    			create_component(horizontalmenu.$$.fragment);
-    			t2 = space();
-    			main = element("main");
-    			create_component(cocktails.$$.fragment);
-    			t3 = space();
-    			if (if_block) if_block.c();
-    			if_block_anchor = empty();
-    			attr_dev(div0, "class", "topSectionHolder svelte-57piey");
-    			add_location(div0, file$5, 43, 0, 1219);
-    			attr_dev(div1, "class", "topSection svelte-57piey");
-    			add_location(div1, file$5, 44, 0, 1257);
-    			attr_dev(main, "class", "modalOpen svelte-57piey");
-    			add_location(main, file$5, 48, 0, 1378);
+    			if (if_block0) if_block0.c();
+    			t = space();
+    			if (if_block1) if_block1.c();
+    			if_block1_anchor = empty();
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div0, anchor);
-    			insert_dev(target, t0, anchor);
-    			insert_dev(target, div1, anchor);
-    			mount_component(header, div1, null);
-    			append_dev(div1, t1);
-    			mount_component(horizontalmenu, div1, null);
-    			insert_dev(target, t2, anchor);
-    			insert_dev(target, main, anchor);
-    			mount_component(cocktails, main, null);
-    			insert_dev(target, t3, anchor);
-    			if (if_block) if_block.m(target, anchor);
-    			insert_dev(target, if_block_anchor, anchor);
+    			if (if_block0) if_block0.m(target, anchor);
+    			insert_dev(target, t, anchor);
+    			if (if_block1) if_block1.m(target, anchor);
+    			insert_dev(target, if_block1_anchor, anchor);
     			current = true;
     		},
     		p: function update(ctx, [dirty]) {
-    			const horizontalmenu_changes = {};
-    			if (dirty & /*selectedItem*/ 1) horizontalmenu_changes.selectedItem = /*selectedItem*/ ctx[0];
-    			horizontalmenu.$set(horizontalmenu_changes);
-    			const cocktails_changes = {};
-    			if (dirty & /*selectedItem*/ 1) cocktails_changes.selectedItem = /*selectedItem*/ ctx[0];
-    			cocktails.$set(cocktails_changes);
-    			if (dirty & /*$url*/ 2) show_if = /*$url*/ ctx[1].hash.indexOf("cocktail") > 0;
+    			if (!/*itemActive*/ ctx[1]) {
+    				if (if_block0) {
+    					if_block0.p(ctx, dirty);
 
-    			if (show_if) {
-    				if (if_block) {
-    					if (dirty & /*$url*/ 2) {
-    						transition_in(if_block, 1);
+    					if (dirty & /*itemActive*/ 2) {
+    						transition_in(if_block0, 1);
     					}
     				} else {
-    					if_block = create_if_block$4(ctx);
-    					if_block.c();
-    					transition_in(if_block, 1);
-    					if_block.m(if_block_anchor.parentNode, if_block_anchor);
+    					if_block0 = create_if_block_1$2(ctx);
+    					if_block0.c();
+    					transition_in(if_block0, 1);
+    					if_block0.m(t.parentNode, t);
     				}
-    			} else if (if_block) {
+    			} else if (if_block0) {
     				group_outros();
 
-    				transition_out(if_block, 1, 1, () => {
-    					if_block = null;
+    				transition_out(if_block0, 1, 1, () => {
+    					if_block0 = null;
+    				});
+
+    				check_outros();
+    			}
+
+    			if (/*itemActive*/ ctx[1]) {
+    				if (if_block1) {
+    					if (dirty & /*itemActive*/ 2) {
+    						transition_in(if_block1, 1);
+    					}
+    				} else {
+    					if_block1 = create_if_block$4(ctx);
+    					if_block1.c();
+    					transition_in(if_block1, 1);
+    					if_block1.m(if_block1_anchor.parentNode, if_block1_anchor);
+    				}
+    			} else if (if_block1) {
+    				group_outros();
+
+    				transition_out(if_block1, 1, 1, () => {
+    					if_block1 = null;
     				});
 
     				check_outros();
@@ -3035,31 +3144,20 @@ var app = (function () {
     		},
     		i: function intro(local) {
     			if (current) return;
-    			transition_in(header.$$.fragment, local);
-    			transition_in(horizontalmenu.$$.fragment, local);
-    			transition_in(cocktails.$$.fragment, local);
-    			transition_in(if_block);
+    			transition_in(if_block0);
+    			transition_in(if_block1);
     			current = true;
     		},
     		o: function outro(local) {
-    			transition_out(header.$$.fragment, local);
-    			transition_out(horizontalmenu.$$.fragment, local);
-    			transition_out(cocktails.$$.fragment, local);
-    			transition_out(if_block);
+    			transition_out(if_block0);
+    			transition_out(if_block1);
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div0);
-    			if (detaching) detach_dev(t0);
-    			if (detaching) detach_dev(div1);
-    			destroy_component(header);
-    			destroy_component(horizontalmenu);
-    			if (detaching) detach_dev(t2);
-    			if (detaching) detach_dev(main);
-    			destroy_component(cocktails);
-    			if (detaching) detach_dev(t3);
-    			if (if_block) if_block.d(detaching);
-    			if (detaching) detach_dev(if_block_anchor);
+    			if (if_block0) if_block0.d(detaching);
+    			if (detaching) detach_dev(t);
+    			if (if_block1) if_block1.d(detaching);
+    			if (detaching) detach_dev(if_block1_anchor);
     		}
     	};
 
@@ -3080,7 +3178,7 @@ var app = (function () {
     	validate_store(pageStateStore, "pageStateStore");
     	component_subscribe($$self, pageStateStore, $$value => $$invalidate(4, $pageStateStore = $$value));
     	validate_store(url, "url");
-    	component_subscribe($$self, url, $$value => $$invalidate(1, $url = $$value));
+    	component_subscribe($$self, url, $$value => $$invalidate(5, $url = $$value));
 
     	fetch("https://thecocktaildbapp-default-rtdb.europe-west1.firebasedatabase.app/cocktails.json").then(response => response.json()).then(data => {
     		cocktailsStore.setCocktails(data);
@@ -3097,6 +3195,7 @@ var app = (function () {
     		$$invalidate(0, selectedItem = event.target.innerText);
     	}
 
+    	let itemActive = false;
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
@@ -3120,6 +3219,7 @@ var app = (function () {
     		menuItems,
     		selectedItem,
     		changeMenuItem,
+    		itemActive,
     		$pageStateStore,
     		$url
     	});
@@ -3127,6 +3227,7 @@ var app = (function () {
     	$$self.$inject_state = $$props => {
     		if ("menuItems" in $$props) $$invalidate(2, menuItems = $$props.menuItems);
     		if ("selectedItem" in $$props) $$invalidate(0, selectedItem = $$props.selectedItem);
+    		if ("itemActive" in $$props) $$invalidate(1, itemActive = $$props.itemActive);
     	};
 
     	if ($$props && "$$inject" in $$props) {
@@ -3137,9 +3238,13 @@ var app = (function () {
     		if ($$self.$$.dirty & /*$pageStateStore*/ 16) {
     			 document.body.classList.toggle("modalOpen", $pageStateStore.modalOpened);
     		}
+
+    		if ($$self.$$.dirty & /*$url*/ 32) {
+    			 $$invalidate(1, itemActive = $url.hash.indexOf("cocktail") > 0);
+    		}
     	};
 
-    	return [selectedItem, $url, menuItems, changeMenuItem];
+    	return [selectedItem, itemActive, menuItems, changeMenuItem];
     }
 
     class App extends SvelteComponentDev {

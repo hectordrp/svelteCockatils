@@ -39,17 +39,32 @@
 	}
 	
 	$: document.body.classList.toggle('modalOpen', $pageStateStore.modalOpened);
+
+	let itemActive = false;
+	$: itemActive = $url.hash.indexOf("cocktail") > 0;
 </script>
 
-<div class="topSectionHolder"></div>
-<div class="topSection">
-	<Header />
-	<HorizontalMenu {menuItems} {selectedItem} on:click={changeMenuItem} />
+{#if !itemActive}
+<div class="wrapper" 
+	transition:fly={{
+		delay: 0,
+		duration: 500,
+		x: -1000,
+		y: 0,
+		opacity: 0.5,
+		easing: quintOut,
+	}}>
+	<div class="topSectionHolder"></div>
+	<div class="topSection">
+		<Header />
+		<HorizontalMenu {menuItems} {selectedItem} on:click={changeMenuItem} />
+	</div>
+	<main class="modalOpen">
+		<Cocktails {cocktailsStore} {selectedItem} />
+	</main>
 </div>
-<main class="modalOpen">
-	<Cocktails {cocktailsStore} {selectedItem} />
-</main>
-{#if $url.hash.indexOf("cocktail") > 0}
+{/if}
+{#if itemActive}
 	<div
 		transition:fly={{
 			delay: 0,
@@ -84,14 +99,15 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background: #fff;
+		/* background: #f6f6f6;; */
+		background: var(--gray);
 		z-index: 10;
 	}
 
 	.topSection {
 		position: fixed;
         top: 0;
-        background: #f6f6f6;
+        background: var(--red);
         z-index: 5;
 		width: 100%;
 	}

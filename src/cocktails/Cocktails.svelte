@@ -57,8 +57,11 @@
         word-wrap: break-word;
         overflow-wrap: break-word;
         display: block;
-        padding: 0 1rem;
+        padding: 0 1rem 1rem 1rem;
+        background: white;
+        border-radius: 0 0 10px 10px;
     }
+    
     a,
     a:visited {
         text-decoration: none;

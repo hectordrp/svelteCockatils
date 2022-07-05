@@ -54,7 +54,7 @@
     }
   
     h1 {
-        color: #000;
+        color: var(--text);
         font-family: "Roboto Slab", serif;
         margin: 0;
     }
@@ -63,8 +63,8 @@
       display: inline-block;
       box-sizing: content-box;
       padding: 0;
-      background-color: #fff;
-      border: 3px solid #366bf426;
+      background-color: var(--white);
+      border: 3px solid var(--secondary);
       border-radius: 28px;
       overflow: hidden;
       margin-top: 6px;
@@ -99,7 +99,7 @@
       float: left;
       font-size: 1rem;
       color: #212121;
-      background-color: #fff;
+      background-color: var(--white);
     }
     
     .searchBtn {
@@ -110,10 +110,10 @@
       font-size: 1.2em;
       text-align: center;
       cursor: pointer;
-      background-color: #fff;
+      background-color: var(--white);
 
       padding: 5px;
-    width: 1.75rem;
+      width: 1.75rem;
     } 
 
   </style>

@@ -4,7 +4,7 @@ const cocktails = writable([]);
 const ingredients = writable([]);
 const searchTextBox = writable("");
 const pageState = writable({
-    modalOpened: true
+    modalOpened: false
 });
 
 const cocktailsStore = {

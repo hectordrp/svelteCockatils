@@ -29,7 +29,7 @@
         margin-bottom: 1rem;
     }
     nav > ul > li {
-        color: rgba(0, 0, 0, 0.7);
+        color: var(--light-gray);
         list-style: none;
         padding: 0 1rem;
         font-weight: bold;
@@ -37,13 +37,13 @@
         font-size: 1rem;
     }
     nav > ul > li:hover {
-        color: rgb(118, 155, 204);
+        color: var(--text);
     }
     nav > ul > li:focus {
         outline: none;
         background: transparent;
     }
     nav > ul > li.selected {
-        color: rgb(118, 155, 204);
+        color: var(--text);
     }
 </style>

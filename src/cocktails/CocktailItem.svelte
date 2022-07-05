@@ -59,6 +59,8 @@
         grid-template-columns: minmax(100px, 1fr);
         grid-gap: 1rem;
         margin: 2rem auto;
+        background-color: var(--white);
+        border-radius: 10px;
     }
 
     .container {
@@ -77,6 +79,7 @@
         overflow-wrap: break-word;
         display: block;
         padding: 0 1rem;
+        background-color: var(--white);
     }
     .card-body {
         box-sizing: content-box;
@@ -88,6 +91,8 @@
         display: block;
         padding: 0 1rem;
         white-space: pre-line;
+        background-color: var(--white);
+        border-radius: 10px;
     }
 </style>
 
