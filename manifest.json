@@ -36,7 +36,13 @@
       "src": "./images/icons/maskable_icon.png",
       "sizes": "640x640",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "maskable"
+    },
+    {
+      "src": "./images/icons/any_icon.png",
+      "sizes": "640x640",
+      "type": "image/png",
+      "purpose": "any"
     }
   ],
   "start_url": ".",
